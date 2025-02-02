@@ -1,0 +1,65 @@
+// Class Author
+public class Author {
+    // Instance variables
+    private String name;
+    private String email;
+    private char gender;
+
+    // Constructor to initialize the name, email, and gender
+    public Author(String name, String email, char gender) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for email
+    public String getEmail() {
+        return email;
+    }
+
+    // Getter for gender
+    public char getGender() {
+        return gender;
+    }
+
+    // Setter for email
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // toString method to return the Author's details in a specific format
+    @Override
+    public String toString() {
+        return "Author[name=" + name + ",email=" + email + ",gender=" + gender + "]";
+    }
+}
+
+// Test Driver for Author class
+public class TestAuthor {
+    public static void main(String[] args) {
+        // Create an Author instance using the constructor
+        Author ahTeck = new Author("Tan Ah Teck", "ahteck@nowhere.com", 'm');
+        
+        // Test the toString() method
+        System.out.println(ahTeck);  // Expected output: Author[name=Tan Ah Teck,email=ahteck@nowhere.com,gender=m]
+        
+        // Test getter methods
+        System.out.println("name is: " + ahTeck.getName());      // Expected output: name is: Tan Ah Teck
+        System.out.println("email is: " + ahTeck.getEmail());    // Expected output: email is: ahteck@nowhere.com
+        System.out.println("gender is: " + ahTeck.getGender());  // Expected output: gender is: m
+        
+        // Test setter method
+        ahTeck.setEmail("paulTan@nowhere.com");  // Update the email
+        
+        // Display the updated Author's details
+        System.out.println("Updated Author: " + ahTeck); // Expected output: Author[name=Tan Ah Teck,email=paulTan@nowhere.com,gender=m]
+        
+        // Test getter again after updating the email
+        System.out.println("Updated email is: " + ahTeck.getEmail());  // Expected output: Updated email is: paulTan@nowhere.com
+    }
+}

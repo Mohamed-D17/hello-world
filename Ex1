@@ -11,7 +11,7 @@ public Circle(double radius, String color) {
 Test
 Circle c3 = new Circle(3.0, "blue");
 System.out.println("The circle has radius of " 
-   + c3.getRadius() + " and color of " + c3.getColor());
+   + c3.getRadius() + " and the color of " + c3.getColor());
 
 2.
 Circle
